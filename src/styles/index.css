@@ -1,0 +1,20 @@
+/* ── Tokens first ── */
+@import './variables.css';
+
+/* ── Base & reset ── */
+@import './global.css';
+
+/* ── Section styles ── */
+@import './sections/Banner.css';
+@import './sections/Navbar.css';
+@import './sections/Hero.css';
+@import './sections/PosterSlider.css';
+@import './sections/DescSlider.css';
+@import './sections/StatsBar.css';
+@import './sections/About.css';
+@import './sections/Services.css';
+@import './sections/Projects.css';
+@import './sections/Team.css';
+@import './sections/Testimonials.css';
+@import './sections/Contact.css';
+@import './sections/Footer.css';

@@ -1,0 +1,63 @@
+/* ═══════════════════════════════════════
+   BrightMend — Design Tokens
+   Change colors/fonts here to retheme everything
+═══════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+
+:root {
+  /* Brand */
+  --color-primary:       #1A4A42;
+  --color-primary-dark:  #133830;
+  --color-yellow:        #F5C518;
+  --color-yellow-dim:    rgba(245,197,24,0.15);
+  --color-yellow-text:   #7A5800;
+
+  /* Surfaces */
+  --color-bg:            #F8F8F4;
+  --color-bg-alt:        #EEF0E8;
+  --color-surface:       #FFFFFF;
+  --color-dark:          #111F1A;
+
+  /* Text */
+  --color-ink:           #1A2A1A;
+  --color-muted:         #5A6050;
+  --color-hint:          #7A8070;
+
+  /* Borders */
+  --color-border:        rgba(26,74,66,0.10);
+  --color-border-strong: rgba(26,74,66,0.20);
+
+  /* Typography */
+  --font-display: 'Plus Jakarta Sans', 'DM Sans', sans-serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  /* Spacing */
+  --sp-xs:  4px;
+  --sp-sm:  8px;
+  --sp-md:  16px;
+  --sp-lg:  24px;
+  --sp-xl:  40px;
+  --sp-2xl: 64px;
+  --sp-3xl: 100px;
+
+  /* Radius */
+  --r-sm:   8px;
+  --r-md:   14px;
+  --r-lg:   20px;
+  --r-xl:   28px;
+  --r-full: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(26,74,66,0.07);
+  --shadow-md: 0 4px 24px rgba(26,74,66,0.10);
+  --shadow-lg: 0 8px 48px rgba(26,74,66,0.14);
+
+  /* Transitions */
+  --tr: 0.25s cubic-bezier(0.4,0,0.2,1);
+
+  /* Layout */
+  --max-w:   1200px;
+  --nav-h:   68px;
+  --section-pad: var(--sp-3xl) clamp(16px,5vw,60px);
+}

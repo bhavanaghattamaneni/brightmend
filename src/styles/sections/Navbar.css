@@ -1,0 +1,86 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(16px,5vw,60px);
+  background: rgba(248,248,244,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid transparent;
+  transition: all var(--tr);
+}
+.navbar--scrolled {
+  background: rgba(248,248,244,0.96);
+  border-bottom-color: var(--color-border);
+}
+.navbar__logo { display: flex; align-items: center; }
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem,2vw,2rem);
+}
+.navbar__link {
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: #3A3A2A;
+  transition: color var(--tr);
+}
+.navbar__link:hover { color: var(--color-primary); }
+.navbar__cta {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.45rem 1.2rem;
+  border-radius: var(--r-full);
+  font-size: 0.84rem;
+  font-weight: 600;
+  transition: background var(--tr);
+}
+.navbar__cta:hover { background: var(--color-primary-dark); }
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.navbar__hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition: all var(--tr);
+}
+.navbar__hamburger--open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+.navbar__hamburger--open span:nth-child(2) { opacity: 0; }
+.navbar__hamburger--open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+.navbar__mobile {
+  position: absolute;
+  top: var(--nav-h);
+  left: 0; right: 0;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem clamp(16px,5vw,60px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.navbar__mobile-link { font-size: 0.9rem; font-weight: 500; color: #3A3A2A; }
+.navbar__mobile-cta {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--r-full);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .navbar__links   { display: none; }
+  .navbar__hamburger { display: flex; }
+}

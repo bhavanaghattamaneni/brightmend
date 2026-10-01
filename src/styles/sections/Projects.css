@@ -1,0 +1,61 @@
+.projects {
+  padding: var(--section-pad);
+  background: var(--color-bg);
+}
+.projects__inner  { max-width: var(--max-w); margin: 0 auto; }
+.projects__header { margin-bottom: 3rem; }
+.projects__tabs {
+  display: flex; gap: 0.4rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid #E4E8DC;
+  padding-bottom: 0;
+}
+.projects__tab {
+  font-size: 0.88rem; font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border: none; background: none;
+  color: var(--color-hint);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all var(--tr);
+}
+.projects__tab--active { color: var(--color-primary); border-bottom-color: var(--color-primary); }
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 1.25rem;
+}
+.project-card {
+  background: var(--color-surface);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  position: relative;
+  transition: transform var(--tr), box-shadow var(--tr);
+}
+.project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.project-card--flagship { border: 2px solid var(--color-yellow); }
+.project-card__flagship-badge {
+  position: absolute; top: 12px; right: 12px; z-index: 2;
+  background: var(--color-yellow); color: var(--color-ink);
+  font-size: 0.64rem; font-weight: 800;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: var(--r-full);
+}
+.project-card__image {
+  height: 130px;
+  display: flex; align-items: center; justify-content: center;
+}
+.project-card__emoji { font-size: 2.6rem; }
+.project-card__body  { padding: 1.5rem; }
+.project-card__meta  { display: flex; align-items: center; gap: 8px; margin-bottom: 0.6rem; }
+.project-card__badge {
+  font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: var(--r-full);
+}
+.project-card__tagline { font-size: 0.72rem; color: var(--color-hint); font-style: italic; }
+.project-card__name { font-weight: 800; font-size: 1rem; color: var(--color-ink); margin-bottom: 0.45rem; }
+.project-card__desc { font-size: 0.83rem; color: var(--color-muted); line-height: 1.68; margin-bottom: 1rem; }
+.project-card__tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }

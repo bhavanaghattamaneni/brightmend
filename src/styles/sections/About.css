@@ -1,0 +1,65 @@
+.about {
+  padding: var(--section-pad);
+  background: var(--color-bg);
+}
+.about__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 5rem;
+  align-items: start;
+}
+.about__para { font-size: 0.92rem; color: var(--color-muted); line-height: 1.8; margin-bottom: 1.25rem; }
+.about__mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0 2rem; }
+.mv-card { background: var(--color-bg-alt); border-radius: var(--r-md); padding: 1.2rem; }
+.mv-card__label {
+  font-size: 0.64rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--color-primary); margin-bottom: 0.4rem;
+}
+.mv-card__text { font-size: 0.84rem; color: var(--color-muted); line-height: 1.65; }
+.about__chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: var(--color-bg-alt);
+  color: var(--color-ink);
+  font-size: 0.78rem; font-weight: 600;
+  padding: 5px 12px; border-radius: var(--r-full);
+}
+.about__values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.value-card {
+  background: var(--color-surface);
+  border-radius: var(--r-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+.value-card__icon  { font-size: 1.8rem; margin-bottom: 0.65rem; }
+.value-card__title { font-weight: 700; font-size: 0.9rem; color: var(--color-ink); margin-bottom: 0.35rem; }
+.value-card__desc  { font-size: 0.79rem; color: var(--color-muted); line-height: 1.65; }
+.about__quote-card {
+  margin-top: 1.25rem;
+  background: var(--color-primary);
+  border-radius: var(--r-lg);
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+.about__quote-card::before {
+  content: '';
+  position: absolute;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: rgba(245,197,24,0.08);
+  top: -30px; right: -30px;
+}
+.about__quote-text {
+  font-family: var(--font-display);
+  font-size: 1.3rem; font-weight: 300; font-style: italic;
+  color: #fff; line-height: 1.5; margin-bottom: 1rem;
+}
+.about__quote-attr { font-size: 0.78rem; color: rgba(245,197,24,0.75); font-weight: 600; }
+@media (max-width: 600px) {
+  .about__mv-grid { grid-template-columns: 1fr; }
+}

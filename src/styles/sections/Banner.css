@@ -1,0 +1,21 @@
+.banner {
+  position: relative;
+  background: var(--color-yellow);
+  color: var(--color-ink);
+  text-align: center;
+  padding: 0.55rem 3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.banner__close {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  color: rgba(26,42,26,0.5);
+  font-weight: 700;
+}
